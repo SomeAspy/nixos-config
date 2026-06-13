@@ -12,5 +12,9 @@
     okular
     qrca
     plasma-browser-integration
+    krdp
+    krfb
+    kuserfeedback
+    konsole
   ];
 }

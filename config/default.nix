@@ -12,6 +12,11 @@
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
+    settings = {
+      General = {
+        FastConnectable = true;
+      };
+    };
   };
 
   # TPM
@@ -29,7 +34,18 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Networking
-  networking.networkmanager.enable = true;
+  # Maybe default DoH later idk
+  networking = {
+    nameservers = [
+      # If both google and cloudfare are down you are fucked anyway
+      "1.1.1.1"
+      "8.8.8.8"
+    ];
+    networkmanager = {
+      enable = true;
+      dns = "none"; # Ignore  DHCP provided DNS
+    };
+  };
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -57,7 +73,7 @@
   users.users."aiden" = {
     isNormalUser = true;
     description = "Aiden";
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     extraGroups = [
       "networkmanager"
       "wheel"

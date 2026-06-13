@@ -32,13 +32,13 @@
       };
       search = {
         force = true;
-        default = "google";
+        default = "notgoogle";
         privateDefault = "ddg";
         engines = {
-          "google" = {
+          "notgoogle" = {
             urls = [
               {
-                template = "https://google.com/search";
+                template = "https://s.dunkirk.sh";
                 params = [
                   {
                     name = "q";
@@ -47,7 +47,7 @@
                 ];
               }
             ];
-            icon = "https://www.google.com/favicon.ico";
+            icon = "https://s.dunkirk.sh/goose.gif";
           };
         };
       };

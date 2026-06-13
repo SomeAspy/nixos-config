@@ -14,11 +14,12 @@
     beeper
     syncplay
     seafile-client
-    rbw
+    rbw # Root doesn't need access to my personal keys
     prismlauncher
     pear-desktop
     nomachine-client
     mpv
     librewolf
+    kitty
   ];
 }

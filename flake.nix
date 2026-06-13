@@ -1,4 +1,4 @@
-{ 
+{
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
@@ -13,22 +13,28 @@
       };
     };
   };
-  outputs = inputs: 
-  let 
-    addHost = hostname: inputs.nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./config/${hostname}/configuration.overrides.nix
-        ./config/${hostname}/hardware-configuration.nix
-        inputs.home-manager.nixosModules.home-manager
-      ];
-    };
+  outputs =
+    inputs:
+    let
+      addHost =
+        hostname:
+        inputs.nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./config/default.nix
+            ./config/hosts/${hostname}/configuration.overrides.nix
+            ./config/hosts/${hostname}/hardware-configuration.nix
+            ./config/hosts/${hostname}/home.overrides.nix
+            inputs.home-manager.nixosModules.home-manager
+          ];
+        };
 
-  in {
-    nixosConfigurations = {
-      amb-desktop = addHost "amb-desktop";
-      amb-laptop = addHost "amb-laptop";
+    in
+    {
+      nixosConfigurations = {
+        amb-desktop = addHost "amb-desktop";
+        amb-laptop = addHost "amb-laptop";
+      };
     };
-  };
 }
