@@ -1,6 +1,6 @@
 { pkgs, ... }:
 
-# GUI / INSTALLED TO HOME ONLY
+# USER / INSTALLED TO HOME ONLY
 
 {
   home.packages = with pkgs; [
@@ -21,5 +21,7 @@
     mpv
     librewolf
     kitty
+    nodejs
+    pnpm
   ];
 }

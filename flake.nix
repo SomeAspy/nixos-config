@@ -5,13 +5,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        home-manager.follows = "home-manager";
-      };
-    };
   };
   outputs =
     inputs:
@@ -20,12 +13,12 @@
         hostname:
         inputs.nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = { inherit inputs; };
+          # specialArgs = { inherit inputs; };
           modules = [
-            ./config/default.nix
-            ./config/hosts/${hostname}/configuration.overrides.nix
-            ./config/hosts/${hostname}/hardware-configuration.nix
-            ./config/hosts/${hostname}/home.overrides.nix
+            ./default.nix
+            ./hosts/${hostname}/configuration.overrides.nix
+            ./hosts/${hostname}/hardware-configuration.nix
+            ./hosts/${hostname}/home.overrides.nix
             inputs.home-manager.nixosModules.home-manager
           ];
         };
