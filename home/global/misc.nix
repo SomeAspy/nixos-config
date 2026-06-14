@@ -5,8 +5,6 @@
     nixfmt
     croc
     fastfetch
-    pinentry-qt
     wget
-    lazygit
   ];
 }

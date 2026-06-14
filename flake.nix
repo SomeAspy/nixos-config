@@ -5,6 +5,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    xremap-flake.url = "github:xremap/nix-flake";
   };
   outputs =
     inputs:
@@ -13,9 +14,9 @@
         hostname:
         inputs.nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          # specialArgs = { inherit inputs; };
+          specialArgs = { inherit inputs; };
           modules = [
-            ./default.nix
+            ./base.nix
             ./hosts/${hostname}/configuration.overrides.nix
             ./hosts/${hostname}/hardware-configuration.nix
             ./hosts/${hostname}/home.overrides.nix

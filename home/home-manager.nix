@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, inputs, ... }:
 
 {
   home-manager = {
@@ -14,6 +14,7 @@
       "aiden" = {
         imports = lib.flatten [
           (builtins.filter (lib.hasSuffix ".nix") (lib.fileset.toList ./user))
+          inputs.xremap-flake.homeManagerModules.default
         ];
 
       };

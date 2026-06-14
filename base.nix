@@ -4,9 +4,20 @@
   imports = lib.flatten [
     ./home/home-manager.nix
     (builtins.filter (lib.hasSuffix ".nix") (
-      lib.fileset.toList (lib.fileset.union ./modules ./services)
+      lib.fileset.toList (lib.fileset.union ./modules ./root-services)
     ))
   ];
+
+  nix.settings = {
+    substituters = [
+      "https://cache.nixos.org"
+      "https://nix-community.cachix.org"
+    ];
+    trusted-public-keys = [
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
+  };
 
   # Bluetooth
   hardware.bluetooth = {
@@ -69,6 +80,9 @@
     "flakes"
   ];
 
+  # For xremap
+  hardware.uinput.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."aiden" = {
     isNormalUser = true;
@@ -77,6 +91,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "uinput"
     ];
   };
 

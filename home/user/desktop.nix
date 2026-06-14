@@ -1,22 +1,8 @@
-{ pkgs, ... }:
+{ ... }:
 {
   programs = {
-    anyrun = {
+    rofi = {
       enable = true;
-      config = {
-        closeOnClick = true;
-        hideIcons = false;
-        layer = "overlay";
-        showResultsImmediately = true;
-        plugins = [
-          "${pkgs.anyrun}/lib/libapplications.so"
-          "${pkgs.anyrun}/lib/librink.so"
-          "${pkgs.anyrun}/lib/libshell.so"
-          "${pkgs.anyrun}/lib/libdictionary.so"
-          "${pkgs.anyrun}/lib/libwebsearch.so"
-          "${pkgs.anyrun}/lib/libnix_run.so"
-        ];
-      };
     };
     waybar = {
       enable = true;
@@ -27,10 +13,12 @@
           height = 30;
 
           modules-right = [
+            "mpris"
             "tray"
             "clock"
           ];
           modules-left = [
+
             "wlr/taskbar"
           ];
           "wlr/taskbar" = {
@@ -39,13 +27,16 @@
             all-outputs = true;
           };
 
+          mpris = {
+            format = "{dynamic}";
+          };
+
         };
       };
     };
   };
   home = {
     file = {
-      ".config/labwc/rc.xml".source = ./static/labwc/rc.xml;
       ".config/labwc/autostart".source = ./static/labwc/autostart;
       ".config/labwc/environment".source = ./static/labwc/environment;
     };
