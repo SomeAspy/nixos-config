@@ -1,4 +1,4 @@
-{ lib, inputs, ... }:
+{ inputs, lib, ... }:
 
 {
   home-manager = {
@@ -6,15 +6,15 @@
     useUserPackages = true;
     backupFileExtension = "old";
     sharedModules = lib.flatten [
-      (builtins.filter (lib.hasSuffix ".nix") (lib.fileset.toList ./global))
+      (lib.fileset.toList (lib.fileset.fileFilter (file: file.hasExt "nix") ./global))
       { home.stateVersion = "26.05"; }
     ];
     # extraSpecialArgs = { inherit inputs; }; #unsure if needed
     users = {
       "aiden" = {
         imports = lib.flatten [
-          (builtins.filter (lib.hasSuffix ".nix") (lib.fileset.toList ./user))
-          inputs.xremap-flake.homeManagerModules.default
+          (lib.fileset.toList (lib.fileset.fileFilter (file: file.hasExt "nix") ./user))
+          inputs.plasma-manager.homeModules.plasma-manager
         ];
 
       };

@@ -2,9 +2,33 @@
 {
   programs.librewolf = {
     enable = true;
+
+    # uBlock doesn't cloud sync out of the box
+    policies = {
+      ExtensionSettings = {
+        "uBlock0@raymondhill.net" = {
+          installation_mode = "normal_installed";
+        };
+      };
+      "3rdparty".Extensions."uBlock0@raymondhill.net" = {
+        userSettings = [
+          [
+            "cloudStorageEnabled"
+            "true"
+          ]
+        ];
+      };
+    };
+
     profiles.default = {
       # Sane usability
       settings = {
+        # Stuff to give extensions cloud sync
+        "services.sync.engine.addons" = true;
+        "services.sync.engine.prefs" = true;
+        "webextensions.storage.sync.enabled" = true;
+        "webextensions.storage.sync.serverURL" = "https://sync.main.fx.services.mozilla.com/v1/";
+
         "privacy.resistFingerprinting" = false;
         "webgl.disabled" = false;
         "privacy.clearOnShutdown.cookies" = false;

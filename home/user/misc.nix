@@ -19,21 +19,14 @@
     pear-desktop
     nomachine-client
     mpv
-    librewolf
     kitty
     nodejs
     pnpm
     mpv
-    grim
-    slurp
-    satty
-    wl-clipboard
     lazygit
     pinentry-qt
   ];
 
   services = {
-    playerctld.enable = true;
-    mpris-proxy.enable = true;
   };
 }

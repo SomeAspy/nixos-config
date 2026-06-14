@@ -5,7 +5,16 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    xremap-flake.url = "github:xremap/nix-flake";
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
+    nix-flatpak = {
+      url = "github:gmodena/nix-flatpak/?ref=latest";
+    };
   };
   outputs =
     inputs:
@@ -16,11 +25,12 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            ./base.nix
+            ./entry.nix
             ./hosts/${hostname}/configuration.overrides.nix
             ./hosts/${hostname}/hardware-configuration.nix
             ./hosts/${hostname}/home.overrides.nix
             inputs.home-manager.nixosModules.home-manager
+            inputs.nix-flatpak.nixosModules.nix-flatpak
           ];
         };
 
