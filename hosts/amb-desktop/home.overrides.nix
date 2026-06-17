@@ -1,5 +1,3 @@
-{ ... }:
-
 {
   home-manager.users."aiden" = {
     programs.plasma = {

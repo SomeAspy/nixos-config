@@ -1,4 +1,3 @@
-{ ... }:
 {
   programs.git = {
     enable = true;
@@ -14,6 +13,7 @@
       };
       commit = {
         gpgsign = true;
+
       };
     };
   };

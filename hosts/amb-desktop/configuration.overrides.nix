@@ -1,5 +1,3 @@
-{ ... }:
-
 {
   networking.hostName = "amb-desktop";
   fileSystems = {

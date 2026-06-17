@@ -11,7 +11,7 @@
       shakeCursor.enable = false;
       zoom.enable = false;
     };
-
+    session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
     # I'm pretty sure this is literally broken
     # https://github.com/nix-community/plasma-manager/discussions/553
     # https://invent.kde.org/documentation/develop-kde-org/-/work_items/235
@@ -28,14 +28,10 @@
       }
     ];
 
+    # This isn't working
     configFile = {
       "kwinrc"."ElectricBorders" = {
         TopLeft = "None";
-      };
-      "ksmserverrc" = {
-        General = {
-          loginMode = "startWithEmptySession";
-        };
       };
     };
   };

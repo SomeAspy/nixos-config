@@ -14,7 +14,7 @@
 
     fish = {
       enable = true;
-      shellAbbrs = {
+      shellAliases = {
         cat = "bat -pP";
         grep = "rg";
         ls = "eza";

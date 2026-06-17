@@ -9,24 +9,25 @@
       withOpenASAR = true;
       withTTS = false;
     })
-    vscodium
     thunderbird
     beeper
     syncplay
     seafile-client
     rbw # Root doesn't need access to my personal keys
     prismlauncher
-    pear-desktop
     nomachine-client
-    mpv
     kitty
+    pinentry-qt
+    qpwgraph
+    nh
+    syncplay
+    yt-dlp
+
+    # Development
+    lazygit # I only used this like once but whatever
     nodejs
     pnpm
-    mpv
-    lazygit
-    pinentry-qt
   ];
-
   services = {
   };
 }

@@ -12,6 +12,9 @@
         home-manager.follows = "home-manager";
       };
     };
+    pear-desktop-nix = {
+      url = "github:h-banii/pear-desktop-nix";
+    };
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };

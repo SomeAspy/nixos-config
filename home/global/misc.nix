@@ -2,9 +2,13 @@
 {
   home.packages = with pkgs; [
     psmisc
-    nixfmt
     croc
     fastfetch
     wget
+    whois
+    tldr
+    rustup
+    gcc
+    nerd-fonts.jetbrains-mono
   ];
 }
