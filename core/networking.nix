@@ -8,6 +8,7 @@
         # I need to break habits.
         "aistudio.google.com"
         "chatgpt.com"
+        # "gemini.google.com"
       ];
     };
 

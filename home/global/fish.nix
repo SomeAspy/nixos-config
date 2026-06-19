@@ -22,10 +22,8 @@
       };
 
       interactiveShellInit = ''
-
-        # trying to switch to KiTTY
         set fish_greeting "open tab = ctrl + shift + T
-        close tab = ctrl + shift + Q
+        close tab = ctrl + shift + W
         switch tab = ctrl + tab"
 
         # RBW SSH agent

@@ -15,6 +15,7 @@
           (lib.fileset.toList (lib.fileset.fileFilter (file: file.hasExt "nix") ./user))
           inputs.plasma-manager.homeModules.plasma-manager
           inputs.pear-desktop-nix.homeManagerModules.default
+          inputs.nixcord.homeModules.nixcord
         ];
 
       };
