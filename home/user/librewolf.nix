@@ -1,7 +1,8 @@
+{ pkgs, ... }:
 {
   programs.librewolf = {
     enable = true;
-
+    package = pkgs.librewolf-bin; # Waiting for https://nixpk.gs/pr-tracker.html?pr=533093
     # uBlock doesn't cloud sync out of the box
     policies = {
       ExtensionSettings = {

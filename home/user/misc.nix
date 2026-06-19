@@ -11,16 +11,17 @@
     prismlauncher
     nomachine-client
     pinentry-qt
-    qpwgraph
     nh
     syncplay
     yt-dlp
     wezterm
+    kdePackages.kcalc
 
     # Development
     lazygit # I only used this like once but whatever
     nodejs
     pnpm
+
   ];
   services = {
   };

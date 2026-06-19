@@ -4,10 +4,14 @@
     enable = true;
     discord = {
       equicord.enable = true;
-      vencord.enable = false; # I am getting a warning that this cannot be enabled despite not being explicitly enabled.
+      vencord.enable = false; # I am getting a warning that this cannot be enabled despite not being explicitly enabled. https://github.com/FlameFlag/nixcord/issues/227
       openASAR.enable = true;
       package = pkgs.discord.override {
         withTTS = false;
+      };
+      settings = {
+        SKIP_HOST_UPDATE = true; # Please don't explode
+        USE_NEW_UPDATER = false;
       };
     };
     config.plugins = {
