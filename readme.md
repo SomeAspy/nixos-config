@@ -4,6 +4,11 @@ Nix seems cool I guess
 
 home-manager was a fucking mistake
 
+# FUCK KDE CONFIGS
+I HATE KDE CONFIGS
+HOLY FUCK ITS SO BAD
+THEIR CONFIG FILES ARE ENTIRELY NONSENSICAL
+
 Q: why dont you use KiTTY?
 A: forces TERM=xterm-kitty. Yes please fuck up my SSH connection to any machine ever thank you
 

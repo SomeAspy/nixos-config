@@ -7,9 +7,9 @@
       profile = "high-quality";
       ytdl-raw-options = "ignore-config=,embed-chapters=";
     };
-
-    scripts = [
-      pkgs.mpvScripts.thumbfast
+    scripts = with pkgs.mpvScripts; [
+      mpv-osc-tethys
+      thumbfast
     ];
   };
 }

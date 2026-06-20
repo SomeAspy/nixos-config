@@ -1,10 +1,12 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  ...
+}:
 
 # USER / INSTALLED TO HOME ONLY
 
 {
   home.packages = with pkgs; [
-    beeper
     syncplay
     seafile-client
     rbw # Root doesn't need access to my personal keys
@@ -16,6 +18,8 @@
     yt-dlp
     wezterm
     kdePackages.kcalc
+    kdePackages.gwenview
+    btop
 
     # Development
     lazygit # I only used this like once but whatever
@@ -25,4 +29,5 @@
   ];
   services = {
   };
+
 }

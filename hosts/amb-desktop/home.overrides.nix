@@ -1,13 +1,15 @@
 {
   home-manager.users."aiden" = {
-    programs.plasma = {
-      powerdevil = {
-        AC = {
-          powerProfile = "performance";
+    programs = {
+      plasma = {
+        powerdevil = {
+          AC = {
+            powerProfile = "performance";
+          };
         };
-      };
-      configFile = {
-        "plasmaparc"."General"."VolumeStep" = 1;
+        configFile = {
+          "plasmaparc"."General"."VolumeStep" = 1;
+        };
       };
     };
   };

@@ -22,6 +22,7 @@
     };
   };
   nixpkgs.config.allowUnfree = true;
+  environment.sessionVariables.NIXOS_OZONE_WL = "1"; # I hate electron so much
 
   # This should never change
   system.stateVersion = "26.05";

@@ -21,6 +21,6 @@
     initrd.luks.devices."luks-976096ee-657c-4b9b-b892-52836fc05a1d".allowDiscards = true;
     kernelParams = [ "amd_pstate=active" ];
   };
-
+  nixpkgs.config.rocmSupport = true;
   services.fstrim.enable = true;
 }

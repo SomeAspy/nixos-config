@@ -17,5 +17,5 @@
   };
   warnings = lib.optional (
     builtins.length config.nixpkgs.config.permittedInsecurePackages > 0
-  ) "Insecure packages enabled!";
+  ) "!!!! Insecure packages enabled !!!!";
 }
