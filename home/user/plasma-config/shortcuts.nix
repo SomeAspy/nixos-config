@@ -5,12 +5,5 @@
         "powerProfile" = [ ];
       };
     };
-    hotkeys.commands = {
-      screenshot = {
-        name = "Launch Flameshot";
-        key = "Print";
-        command = "flameshot gui";
-      };
-    };
   };
 }

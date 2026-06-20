@@ -16,6 +16,7 @@
       qrca
       elisa
       krdp
+      # spectacle # Flameshot v14 STILL sucks
     ];
 
     # Plasma 6 currently has non-optional packages that I think should be optional. Waiting for https://github.com/NixOS/nixpkgs/pull/529094 I guess
