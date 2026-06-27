@@ -13,19 +13,9 @@
     enable = true;
     discord = {
       equicord.enable = true;
-      vencord.enable = false; # I am getting a warning that this cannot be enabled despite not being explicitly enabled. https://github.com/FlameFlag/nixcord/issues/227
       openASAR.enable = true;
       package = pkgs.discord.override {
         withTTS = false;
-
-        # These options exploded
-        # Discord is mostly a black box so why not throw electron performance improving flags at it
-        commandLineArgs = [
-          "--disable-gpu" # Discord can't handle shit
-          #  "--ignore-gpu-blocklist"
-          #  "--enable-gpu-rasterization"
-          #  "--enable-zero-copy"
-        ];
       };
       settings = {
         MINIMIZE_TO_TRAY = false;
@@ -37,6 +27,7 @@
         };
         offloadAdmControls = true; # Offload WebRTC processing
         openH264Enabled = true; # Discord places this in the file on its own, same for the line above. Better off not fighting it since we wipe the config file.
+        enableHardwareAcceleration = false; # Fuck
       };
     };
     config.plugins = {
@@ -60,11 +51,12 @@
       imageZoom.enable = true;
 
       # QOL
+      viewIcons.enable = true;
       callTimer.enable = true;
       experiments.enable = true;
       expressionCloner.enable = true;
       fixImagesQuality.enable = true;
-      forwardAnywhere.enable = true;
+      betterForwards.enable = true;
       gifPaste.enable = true;
       guildPickerDumper.enable = true;
       mentionAvatars.enable = true;
