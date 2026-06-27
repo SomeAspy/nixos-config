@@ -1,6 +1,6 @@
 {
 
-  # Maybe default DoH later idk
+  # Maybe default DoT later idk
   networking = {
     # Hosts file
     hosts = {
@@ -8,21 +8,30 @@
         # I need to break habits.
         "aistudio.google.com"
         "chatgpt.com"
-        #"gemini.google.com"
+        "gemini.google.com"
       ];
     };
 
     nameservers = [
       # If both google and cloudfare are down you are fucked anyway
-      "1.1.1.1"
-      "1.0.0.1"
-      "8.8.8.8"
-      "8.8.4.4"
+      # Holding domains here in case I decide to do Encrypted DNS later
+      "1.1.1.1#cloudflare-dns.com"
+      "1.0.0.1#cloudflare-dns.com"
+      "8.8.8.8#dns.google"
+      "8.8.4.4#dns.google"
     ];
+    # Let NM handle this stuff.
+    useDHCP = false;
+    dhcpcd.enable = false;
+
     networkmanager = {
       enable = true;
       dns = "none"; # Ignore DHCP provided DNS
     };
+  };
+  boot.kernel.sysctl = {
+    # Tailscale wants this
+    "net.ipv4.ip_forward" = 1;
   };
 
 }

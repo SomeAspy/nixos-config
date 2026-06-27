@@ -10,6 +10,8 @@
       nixfmt
       vscode-json-languageserver
       package-version-server
+      yaml-language-server
+      bash-language-server
     ];
   };
 }

@@ -20,6 +20,11 @@
     kdePackages.kcalc
     kdePackages.gwenview
     btop
+    r2modman
+    unzip
+    zip
+    protontricks
+    obs-studio
 
     # Development
     lazygit # I only used this like once but whatever

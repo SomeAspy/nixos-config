@@ -10,5 +10,7 @@
     rustup
     gcc
     nerd-fonts.jetbrains-mono
+    sbctl
+    moor
   ];
 }

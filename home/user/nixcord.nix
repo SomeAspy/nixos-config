@@ -7,6 +7,7 @@
 {
   # Discord fills the config file with a bunch of garbage
   home.file."${config.xdg.configHome}/discord/settings.json".force = lib.mkForce true;
+  # This might be crashing because Discord tries to write window size and location data to settings.json
 
   programs.nixcord = {
     enable = true;
@@ -16,11 +17,14 @@
       openASAR.enable = true;
       package = pkgs.discord.override {
         withTTS = false;
+
+        # These options exploded
         # Discord is mostly a black box so why not throw electron performance improving flags at it
         commandLineArgs = [
-          "--ignore-gpu-blocklist"
-          "--enable-gpu-rasterization"
-          "--enable-zero-copy"
+          "--disable-gpu" # Discord can't handle shit
+          #  "--ignore-gpu-blocklist"
+          #  "--enable-gpu-rasterization"
+          #  "--enable-zero-copy"
         ];
       };
       settings = {

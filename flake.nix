@@ -19,6 +19,10 @@
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };
     nixcord.url = "github:FlameFlag/nixcord";
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     inputs:
@@ -35,6 +39,7 @@
             ./hosts/${hostname}/home.overrides.nix
             inputs.home-manager.nixosModules.home-manager
             inputs.nix-flatpak.nixosModules.nix-flatpak
+            inputs.lanzaboote.nixosModules.lanzaboote
           ];
         };
 
