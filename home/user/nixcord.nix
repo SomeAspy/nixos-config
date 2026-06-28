@@ -17,6 +17,7 @@
       package = pkgs.discord.override {
         withTTS = false;
       };
+      # Ref: https://github.com/SomeAspy/Discord.json (Very WIP!!!)
       settings = {
         MINIMIZE_TO_TRAY = false;
         SKIP_HOST_UPDATE = true; # Please don't explode

@@ -12,6 +12,14 @@
       package-version-server
       yaml-language-server
       bash-language-server
+      vtsls # TypeScript LSP
+
+      # just let me build my fucking extensions
+      rustup
+      stdenv
+      pkg-config
+      gcc
+
     ];
   };
 }

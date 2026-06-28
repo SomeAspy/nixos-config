@@ -13,7 +13,6 @@
       };
       commit = {
         gpgsign = true;
-
       };
     };
   };

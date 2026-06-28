@@ -13,21 +13,17 @@
     prismlauncher
     nomachine-client
     pinentry-qt
-    nh
     syncplay
     yt-dlp
     wezterm
-    kdePackages.kcalc
-    kdePackages.gwenview
+    qalculate-qt
+    qimgv
     btop
     r2modman
-    unzip
-    zip
     protontricks
     obs-studio
 
     # Development
-    lazygit # I only used this like once but whatever
     nodejs
     pnpm
 

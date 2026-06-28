@@ -7,10 +7,10 @@
     wget
     whois
     tldr
-    rustup
-    gcc
     nerd-fonts.jetbrains-mono
     sbctl
     moor
+    unzip
+    zip
   ];
 }

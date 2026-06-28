@@ -16,6 +16,9 @@
       qrca
       elisa
       krdp
+      dolphin
+      gwenview
+
       # spectacle # Flameshot v14 STILL sucks
     ];
 

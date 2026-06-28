@@ -6,9 +6,9 @@
     hosts = {
       "0.0.0.0" = [
         # I need to break habits.
-        "aistudio.google.com"
+        #"aistudio.google.com"
         "chatgpt.com"
-        "gemini.google.com"
+        #"gemini.google.com"
       ];
     };
 

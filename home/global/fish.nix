@@ -24,7 +24,10 @@
       interactiveShellInit = ''
         set fish_greeting "open tab = ctrl + shift + T
         close tab = ctrl + shift + W
-        switch tab = ctrl + tab"
+        switch tab = ctrl + tab
+        Run any package = nix-shell -p [pkgname]
+        "
+
 
         # RBW SSH agent
         if type -q rbw
