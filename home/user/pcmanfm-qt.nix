@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  home.pkgs = with pkgs; [
+  home.packages = with pkgs; [
     pcmanfm-qt
     ffmpegthumbnailer
   ];
