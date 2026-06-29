@@ -20,5 +20,16 @@
   boot = {
     initrd.luks.devices."luks-ee5c4483-5db3-4727-a65f-35a3511c7dba".allowDiscards = true;
   };
-  services.fstrim.enable = true;
+  services ={
+    fstrim.enable = true;
+    # KDE will ignore this ffs
+    libinput ={
+      enable = true;
+      touchpad ={
+tapping = false;
+clickMethod ="clickfinger";
+naturalScrolling = true;
+      };
+    };
+  };
 }
