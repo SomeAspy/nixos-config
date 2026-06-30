@@ -17,7 +17,10 @@
         "mailnews.start_page.enabled" = false;
         "mail.receipt.request_return_receipt_on" = true;
         "mail.SpellCheckBeforeSend" = true;
-        "network.cookie.cookieBehavior" = 2; # I don't think my email client needs to accept cookies from sites
+        # 2 = Reject all
+        # 1 = Reject 3rd party
+        # 0 = accept all
+        "network.cookie.cookieBehavior" = 1; # Google SSO explodes without cookies
         "privacy.globalprivacycontrol.enabled" = true;
 
         # Telemtry config
