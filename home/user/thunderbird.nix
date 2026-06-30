@@ -17,7 +17,7 @@
         "mailnews.start_page.enabled" = false;
         "mail.receipt.request_return_receipt_on" = true;
         "mail.SpellCheckBeforeSend" = true;
-        "network.cookie.cookieBehavior" = 2; # Don't accept cookies from sites
+        "network.cookie.cookieBehavior" = 2; # I don't think my email client needs to accept cookies from sites
         "privacy.globalprivacycontrol.enabled" = true;
 
         # Telemtry config

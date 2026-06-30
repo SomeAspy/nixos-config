@@ -13,7 +13,6 @@
     prismlauncher
     nomachine-client
     pinentry-qt
-    syncplay
     yt-dlp
     wezterm
     qalculate-qt

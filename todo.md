@@ -5,3 +5,4 @@
 - surgical config of pcmanfmqt
 - change rbw email to amb@aspy.dev probably
 - same for firefox maybe
+- disko?????

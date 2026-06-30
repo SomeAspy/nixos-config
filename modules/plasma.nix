@@ -18,6 +18,9 @@
       krdp
       dolphin
       gwenview
+      plasma-browser-integration
+      kwin-x11
+      plasma-workspace-wallpapers
 
       # spectacle # Flameshot v14 STILL sucks
     ];
