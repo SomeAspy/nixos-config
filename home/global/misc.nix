@@ -12,5 +12,6 @@
     moor
     unzip
     zip
+    python
   ];
 }
