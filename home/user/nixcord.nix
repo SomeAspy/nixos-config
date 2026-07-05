@@ -1,12 +1,8 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}:
+{ pkgs, ... }:
 {
   # Discord fills the config file with a bunch of garbage
-  home.file."${config.xdg.configHome}/discord/settings.json".force = lib.mkForce true;
+  # This might not be needed anymore?
+  # home.file."${config.xdg.configHome}/discord/settings.json".force = lib.mkForce true;
   # This might be crashing because Discord tries to write window size and location data to settings.json
 
   programs.nixcord = {

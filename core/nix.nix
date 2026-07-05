@@ -1,9 +1,5 @@
 {
   nix = {
-    gc = {
-      automatic = true;
-      options = "--delete-old";
-    };
     settings = {
 
       auto-optimise-store = true;

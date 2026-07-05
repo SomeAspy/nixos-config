@@ -32,6 +32,7 @@
       yaml-language-server
       bash-language-server
       vtsls # TypeScript LSP
+      biome
 
       # just let me build my fucking extensions
       rustup

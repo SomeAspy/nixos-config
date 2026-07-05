@@ -18,7 +18,7 @@
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };
-    nixcord.url = "github:FlameFlag/nixcord";
+    nixcord.url = "github:4evy/nixcord";
     lanzaboote = {
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";

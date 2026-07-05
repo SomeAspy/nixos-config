@@ -1,14 +1,14 @@
 {
-
-  # Maybe default DoT later idk
   networking = {
     # Hosts file
     hosts = {
       "0.0.0.0" = [
         # I need to break habits.
-        #"aistudio.google.com"
+        # Note to future self:
+        # If you uncomment this shit again you are a FUCKING DISAPPOINTMENT and a FUCKING FRAUD and you KNOW IT
+        "aistudio.google.com"
         "chatgpt.com"
-        #"gemini.google.com"
+        "gemini.google.com"
       ];
     };
 
@@ -40,7 +40,7 @@
       Resolve = {
         DNSOverTLS = true;
         DNSSEC = true;
-        Domains = ["~."];
+        Domains = [ "~." ];
         FallbackDNS = [
           "1.1.1.1#cloudflare-dns.com"
           "1.0.0.1#cloudflare-dns.com"
