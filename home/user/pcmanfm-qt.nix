@@ -1,131 +1,24 @@
 { pkgs, ... }:
+let
+  iniFormat = pkgs.formats.ini { };
+  pcmanfmqtConfig = {
+    Behavior = {
+      # I hate seeing trash folders on removable media
+      NoUsbTrash = true;
+    };
+    FolderView = {
+      BigIconSize = 96;
+    };
+    System = {
+      Terminal = "wezterm";
+    };
+  };
+in
 {
   home.packages = with pkgs; [
     pcmanfm-qt
     ffmpegthumbnailer
   ];
-  # I should probably surgically edit this with Nix INI at some point because this is gross
-  xdg.configFile."pcmanfm-qt/default/settings.conf".text = ''
-    [Behavior]
-    AutoSelectionDelay=600
-    BookmarkOpenMethod=current_tab
-    ConfirmDelete=true
-    ConfirmTrash=false
-    CtrlRightClick=false
-    NoUsbTrash=false
-    QuickExec=false
-    RecentFilesNumber=0
-    SelectNewFiles=false
-    SingleClick=false
-    SingleWindowMode=false
-    UseTrash=true
-
-    [Desktop]
-    AllSticky=false
-    BgColor=#000000
-    DesktopCellMargins=@Size(3 1)
-    DesktopIconSize=48
-    DesktopShortcuts=@Invalid()
-    FgColor=#ffffff
-    Font="Noto Sans,10,-1,0,400,0,0,0,0,0,0,0,0,0,0,1,,0,0"
-    HideItems=false
-    LastSlide=
-    NoItemTooltip=false
-    OpenWithDefaultFileManager=false
-    PerScreenWallpaper=false
-    ScreenNames=@Invalid()
-    ShadowColor=#000000
-    ShowHidden=false
-    SlideShowInterval=0
-    SortColumn=name
-    SortFolderFirst=true
-    SortHiddenLast=false
-    SortOrder=ascending
-    TransformWallpaper=false
-    Wallpaper=
-    WallpaperDialogSize=@Size(700 500)
-    WallpaperDialogSplitterPos=200
-    WallpaperDirectory=
-    WallpaperMode=none
-    WallpaperRandomize=false
-    WorkAreaMargins=12, 12, 12, 12
-
-    [FolderView]
-    BackupAsHidden=false
-    BigIconSize=96
-    CustomColumnWidths=@Invalid()
-    FolderViewCellMargins=@Size(3 3)
-    HiddenColumns=@Invalid()
-    Mode=icon
-    NoItemTooltip=false
-    ScrollPerPixel=true
-    ShadowHidden=true
-    ShowFilter=false
-    ShowFullNames=true
-    ShowHidden=true
-    SidePaneIconSize=24
-    SmallIconSize=16
-    SortCaseSensitive=false
-    SortColumn=name
-    SortFolderFirst=true
-    SortHiddenLast=false
-    SortOrder=ascending
-    ThumbnailIconSize=128
-
-    [Places]
-    HiddenPlaces=@Invalid()
-
-    [Search]
-    ContentPatterns=@Invalid()
-    MaxSearchHistory=0
-    NamePatterns=@Invalid()
-    searchContentCaseInsensitive=false
-    searchContentRegexp=true
-    searchNameCaseInsensitive=false
-    searchNameRegexp=true
-    searchRecursive=false
-    searchhHidden=false
-
-    [System]
-    Archiver=file-roller
-    FallbackIconThemeName=oxygen
-    OnlyUserTemplates=false
-    SIUnit=false
-    SuCommand=lxqt-sudo %s
-    TemplateRunApp=false
-    TemplateTypeOnce=false
-    Terminal=xterm
-
-    [Thumbnail]
-    MaxExternalThumbnailFileSize=-1
-    MaxThumbnailFileSize=4096
-    ShowThumbnails=true
-    ThumbnailLocalFilesOnly=true
-
-    [Volume]
-    AutoRun=true
-    CloseOnUnmount=true
-    MountOnStartup=true
-    MountRemovable=true
-
-    [Window]
-    AlwaysShowTabs=true
-    FixedHeight=480
-    FixedWidth=640
-    LastWindowHeight=893
-    LastWindowMaximized=false
-    LastWindowWidth=1711
-    PathBarButtons=true
-    RememberWindowSize=true
-    ReopenLastTabs=false
-    ShowMenuBar=true
-    ShowTabClose=true
-    SidePaneMode=places
-    SidePaneVisible=true
-    SplitView=false
-    SplitViewTabsNum=0
-    SplitterPos=334
-    SwitchToNewTab=false
-    TabPaths=@Invalid()
-  '';
+  xdg.configFile."pcmanfm-qt/default/settings.conf".source =
+    iniFormat.generate "pcman-qt-settings.conf" pcmanfmqtConfig;
 }
