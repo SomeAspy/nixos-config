@@ -27,6 +27,8 @@
     networkmanager = {
       enable = true;
       dns = "systemd-resolved"; # Ignore DHCP provided DNS
+      # KDE UI shows DNS set to DHCP provided, not sure whats going on here
+      # Should probably figure that out later
     };
   };
   boot.kernel.sysctl = {
@@ -39,12 +41,8 @@
     settings = {
       Resolve = {
         DNSOverTLS = true;
-        DNSSEC = true;
+        DNSSEC = "allow-downgrade"; # It is the year of our lord 2026 and some sites still don't have DNSSEC. (cough electron-vite.org)
         Domains = [ "~." ];
-        FallbackDNS = [
-          "1.1.1.1#cloudflare-dns.com"
-          "1.0.0.1#cloudflare-dns.com"
-        ];
       };
     };
   };

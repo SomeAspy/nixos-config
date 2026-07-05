@@ -2,13 +2,17 @@
   # virtslop
   virtualisation = {
     docker = {
+      enableOnBoot = false; # Start when requested
       storageDriver = "btrfs";
       rootless = {
         enable = true;
         setSocketVariable = true;
       };
     };
-    libvirtd.enable = true;
+    libvirtd = {
+      enable = true;
+      onBoot = "ignore"; # This isn't the actual service, this refers to the VMs
+    };
   };
 
   # TPM
@@ -26,6 +30,9 @@
     settings = {
       General = {
         FastConnectable = true;
+        # Whats the worst that could happen
+        KernelExperimental = true;
+        Experimental = true;
       };
     };
   };

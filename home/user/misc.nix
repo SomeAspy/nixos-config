@@ -19,7 +19,6 @@
     qimgv
     btop
     r2modman
-    protontricks
     obs-studio
 
     # Development
