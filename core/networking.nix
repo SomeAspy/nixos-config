@@ -27,8 +27,6 @@
     networkmanager = {
       enable = true;
       dns = "systemd-resolved"; # Ignore DHCP provided DNS
-      # KDE UI shows DNS set to DHCP provided, not sure whats going on here
-      # Should probably figure that out later
     };
   };
   boot.kernel.sysctl = {
