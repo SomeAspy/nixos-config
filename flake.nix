@@ -14,11 +14,13 @@
     };
     pear-desktop-nix = {
       url = "github:h-banii/pear-desktop-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-flatpak = {
-      url = "github:gmodena/nix-flatpak/?ref=latest";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest"; # This takes no input for nixpkgs
+    nixcord = {
+      url = "github:4evy/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixcord.url = "github:4evy/nixcord";
     lanzaboote = {
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
