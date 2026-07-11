@@ -7,9 +7,6 @@
             powerProfile = "performance";
           };
         };
-        configFile = {
-          "plasmaparc"."General"."VolumeStep" = 1;
-        };
       };
     };
   };

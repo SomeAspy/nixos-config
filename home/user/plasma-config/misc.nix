@@ -10,6 +10,9 @@
       zoom.enable = false;
     };
     session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
+    configFile = {
+      "plasmaparc"."General"."VolumeStep" = 1;
+    };
   };
 
 }
