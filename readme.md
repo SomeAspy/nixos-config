@@ -23,9 +23,6 @@ THEIR CONFIG FILES ARE ENTIRELY NONSENSICAL
 ## Q: ew flatpak
   - A: "org.vinegarhq.Sober" [Life is roblox](https://www.youtube.com/shorts/0uC0XiXNs0s)
 
-## Q: Xanmod kernel??
-  - A: I don't know either honestly
-
 ## Q: Your commit messages are ass
   - A: Bro im not about to detail every single change i make to my personal computer
 

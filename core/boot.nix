@@ -1,7 +1,7 @@
 { lib, pkgs, ... }:
 {
   boot = {
-    kernelPackages = pkgs.linuxPackages_xanmod_latest; # This might be insane
+    kernelPackages = pkgs.linuxPackages_latest;
 
     # Networking optimizations - in boot.nix because this is modifying the kernel
     kernelModules = [ "tcp_bbr" ];
