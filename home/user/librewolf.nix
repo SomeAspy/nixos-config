@@ -29,14 +29,22 @@
         "webextensions.storage.sync.enabled" = true;
         "webextensions.storage.sync.serverURL" = "https://sync.main.fx.services.mozilla.com/v1/";
 
+        # RFP tells websites to use light mode. This is INCREDIBLY annoying. Sure, this one aspect can be overriden, but then you have the telltale signs of
+        # a user using RFP but with a difference of the fact you are set to dark mode.
+        # This might do more damage to your fingerprint than just not using it at all.
+        # Unless RFP is updated to use dark mode for everyone, this is gonna suck
         "privacy.resistFingerprinting" = false;
-        "webgl.disabled" = false;
+        # Fuck it, this is like lesser RFP
+        "privacy.fingerprintingProtection" = true;
+        "privacy.fingerprintingProtection.overrides" = "+AllTargets,-CSSPrefersColorScheme";
+        "browser.display.use_document_fonts" = 0; # Websites don't need the details of what fonts are on my system
+        "webgl.disabled" = true; # This seems to do nothing? Defaults to off unless given permission per-site regardless of this option
         "privacy.clearOnShutdown.cookies" = false;
         "network.cookie.lifetimePolicy" = 0; # might fuck shit up idk. third party cookies are probably the more important thing
         "privacy.clearOnShutdown_v2.historyFormDataAndDownloads" = false;
         "privacy.clearOnShutdown_v2.browsingHistoryAndDownloads" = false;
         "privacy.sanitize.sanitizeOnShutdown" = false;
-        # "media.eme.enabled" = true;
+        "media.eme.enabled" = false;
         # History, Extensions, settings not defined here. Synced history is probably the only reason I keep this, since everything else can be managed by nix.
         # Extensions can eventually be migrated into the config here
         # In theory I could store my history elsewhere but maybe A project for another time?
@@ -56,7 +64,8 @@
         "browser.urlbar.suggest.searches" = true;
         "services.sync.engine.passwords" = false; # Bitwarden
         "services.sync.engine.creditcards" = false; # Bitwarden
-        "browser.tabs.warnOnClose" = false;
+        "browser.tabs.warnOnClose" = false; # Annoying
+        "browser.sessionstore.resume_from_crash" = false; # Annoying
       };
       search = {
         force = true;
