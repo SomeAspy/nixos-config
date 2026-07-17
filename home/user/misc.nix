@@ -20,6 +20,7 @@
     btop
     r2modman
     obs-studio
+    audacity
 
     # Development
     nodejs
