@@ -28,3 +28,9 @@ THEIR CONFIG FILES ARE ENTIRELY NONSENSICAL
 
 ## Q: theres a ton of hardcoded shit
   - A: I didn't make this for you
+
+## Q: Why are you modifying hardware-configuration.nix?!?!
+  - A: Just don't blindly use `nix-generate-config` lol
+
+## Q: Why are you using Xe on 11th gen intel?
+  - A: "Experimental" is good enough for me

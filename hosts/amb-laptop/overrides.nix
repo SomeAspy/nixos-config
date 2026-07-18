@@ -21,4 +21,15 @@
       };
     };
   };
+  services = {
+    # KDE will ignore this ffs
+    libinput = {
+      enable = true;
+      touchpad = {
+        tapping = false;
+        clickMethod = "clickfinger";
+        naturalScrolling = true;
+      };
+    };
+  };
 }

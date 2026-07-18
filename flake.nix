@@ -36,9 +36,8 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./entry.nix
-            ./hosts/${hostname}/configuration.overrides.nix
-            ./hosts/${hostname}/hardware-configuration.nix
-            ./hosts/${hostname}/home.overrides.nix
+            ./hosts/${hostname}/hardware.nix
+            ./hosts/${hostname}/overrides.nix
             inputs.home-manager.nixosModules.home-manager
             inputs.nix-flatpak.nixosModules.nix-flatpak
             inputs.lanzaboote.nixosModules.lanzaboote

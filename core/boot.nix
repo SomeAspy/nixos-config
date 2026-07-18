@@ -40,6 +40,5 @@
     };
   };
 
-  # encrypted swap is disabled because it is literally broken https://github.com/nixos/nixpkgs/issues/524389
   zramSwap.enable = true;
 }
