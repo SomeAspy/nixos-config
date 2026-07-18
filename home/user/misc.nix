@@ -25,9 +25,5 @@
     # Development
     nodejs
     pnpm
-
   ];
-  services = {
-  };
-
 }

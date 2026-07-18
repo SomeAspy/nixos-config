@@ -7,7 +7,7 @@
     Exec=${pkgs.seafile-client}/bin/seafile-applet
     Type=Application
     Terminal=false
-    NoDisplay=false
+    NoDisplay=true
   '';
 
   xdg.configFile."autostart/beeper.desktop".text = ''
