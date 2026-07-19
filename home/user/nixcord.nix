@@ -74,7 +74,21 @@
         serverInfo.enable = true;
         showHiddenThings.enable = true;
         translate.enable = true;
-        noProfileThemes.enable = true; # I genuinely hate profiles being covered by stupid effects
+        declutter = {
+          enable = true;
+          alwaysShowUsername = false;
+          removeAudioMenus = false;
+          removeAvatarDecoration = true;
+          removeBillingSettings = false;
+          removeClanTag = false;
+          removeGiftButton = false;
+          removeNameplate = false;
+          removeProfileEffect = true; # I genuinely hate profiles being covered by stupid effects
+          removeQuestsAboveDms = true;
+          removeServerBoostInfo = false;
+          removeShopAboveDms = true;
+          removeUnavailableEmojiPicker = false;
+        };
 
       };
 
