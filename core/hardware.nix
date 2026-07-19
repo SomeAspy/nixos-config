@@ -1,13 +1,10 @@
 {
   # virtslop
   virtualisation = {
-    docker = {
-      enableOnBoot = false; # Start when requested
-      storageDriver = "btrfs";
-      rootless = {
-        enable = true;
-        setSocketVariable = true;
-      };
+    podman = {
+      enable = true;
+      autoPrune.enable = true;
+      dockerCompat = true; # Just aliases commands
     };
     libvirtd = {
       enable = true;

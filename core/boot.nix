@@ -6,11 +6,13 @@
     # Networking optimizations - in boot.nix because this is modifying the kernel
     kernelModules = [ "tcp_bbr" ];
     kernel.sysctl = {
+      # https://wiki.archlinux.org/title/Sysctl#Enable_BBR
       "net.ipv4.tcp_congestion_control" = "bbr";
       "net.core.default_qdisc" = "fq";
-      "net.core.rmem_max" = 4194304;
-      "net.core.wmem_max" = 4194304;
-      "net.core.somaxconn" = 4096;
+      # Tailscale wants this
+      "net.ipv4.ip_forward" = 1;
+      # https://wiki.archlinux.org/title/Sysctl#Enable_TCP_Fast_Open
+      "net.ipv4.tcp_fastopen" = 3;
     };
     loader = {
       systemd-boot.enable = lib.mkForce false; # Lanzaboote

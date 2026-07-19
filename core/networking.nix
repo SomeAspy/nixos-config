@@ -12,6 +12,10 @@
       ];
     };
 
+    nftables = {
+      # Just networking.firewall uses iptables
+      enable = true;
+    };
     nameservers = [
       # If both google and cloudfare are down you are fucked anyway
       "1.1.1.1#cloudflare-dns.com"
@@ -28,10 +32,6 @@
       enable = true;
       dns = "systemd-resolved"; # Ignore DHCP provided DNS
     };
-  };
-  boot.kernel.sysctl = {
-    # Tailscale wants this
-    "net.ipv4.ip_forward" = 1;
   };
 
   services.resolved = {
