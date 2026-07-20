@@ -1,9 +1,4 @@
-{
-  pkgs,
-  ...
-}:
-
-# USER / INSTALLED TO HOME ONLY
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [

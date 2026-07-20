@@ -2,8 +2,6 @@
 {
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
-
-    # Networking optimizations - in boot.nix because this is modifying the kernel
     kernelModules = [ "tcp_bbr" ];
     kernel.sysctl = {
       # https://wiki.archlinux.org/title/Sysctl#Enable_BBR
