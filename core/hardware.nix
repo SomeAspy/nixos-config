@@ -1,4 +1,6 @@
 {
+  # Firmware packages
+  hardware.enableRedistributableFirmware = true;
   # virtslop
   virtualisation = {
     podman = {

@@ -1,4 +1,3 @@
-{ config, lib, ... }:
 {
   # Putting hostname here because it defines what the device is
   networking.hostName = "amb-laptop";
@@ -70,6 +69,6 @@
     };
   };
 
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  nixpkgs.hostPlatform = "x86_64-linux";
+  hardware.cpu.intel.updateMicrocode = true
 }
