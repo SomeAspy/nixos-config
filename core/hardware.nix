@@ -1,6 +1,5 @@
+{ lib, ... }:
 {
-  # Firmware packages
-  hardware.enableRedistributableFirmware = true;
   # virtslop
   virtualisation = {
     podman = {
@@ -13,6 +12,8 @@
       onBoot = "ignore"; # This isn't the actual service, this refers to the VMs
     };
   };
+  # Don't start the service at boot, but leave the socket alive for activation when requested
+  systemd.services.libvirtd.wantedBy = lib.mkForce [ ];
 
   # TPM
   # https://wiki.nixos.org/wiki/Full_Disk_Encryption#Store_key_on_FIDO2_device_or_TPM
@@ -22,16 +23,20 @@
     tctiEnvironment.enable = true;
   };
 
-  # Bluetooth my beloved
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-    settings = {
-      General = {
-        FastConnectable = true;
-        # Whats the worst that could happen
-        KernelExperimental = true;
-        Experimental = true;
+  hardware = {
+    # Firmware
+    enableRedistributableFirmware = true;
+    # Bluetooth my beloved
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+      settings = {
+        General = {
+          FastConnectable = true;
+          # Whats the worst that could happen
+          KernelExperimental = true;
+          Experimental = true;
+        };
       };
     };
   };
