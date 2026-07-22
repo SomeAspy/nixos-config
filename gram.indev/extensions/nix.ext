@@ -1,0 +1,23 @@
+{
+  lib,
+  buildGramExtension,
+  fetchFromGitHub,
+  ...
+}:
+buildGramExtension (finalAttrs: {
+  id = "nix";
+  version = "0.0.1";
+
+  src = fetchFromGitHub {
+    owner = "zed-extensions";
+    repo = "nix";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-5nVZtgckmiDynSZqmO0uTEm2AQ8oVidE6NU+9FpXZfk=";
+  };
+
+  meta = {
+    homepage = "https://github.com/zed-extensions/nix";
+    description = "something";
+    license = lib.licenses.mit;
+  };
+})
