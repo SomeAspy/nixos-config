@@ -4,10 +4,10 @@
     [Desktop Entry]
     Name=SeaFile
     Comment=Starts SeaFile process
-    Exec=${pkgs.seafile-client}/bin/seafile-applet
+    Exec=${pkgs.seafile-client}/bin/seafile-applet --hide
     Type=Application
     Terminal=false
-    NoDisplay=true
+    NoDisplay=false
   '';
 
   xdg.configFile."autostart/beeper.desktop".text = ''

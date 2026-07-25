@@ -25,9 +25,10 @@
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # https://github.com/nix-community/home-manager/issues/9676
     gram-extensions = {
-      url = "git+http://codeberg.org/niklaskorz/nix-gram-extensions"; # HTTP to dodge git changing https:// to ssh:// - its redirected to https anyway
-      # inputs.nixpkgs.follows = "nixpkgs"; #Horror
+      url = "git+https://codeberg.org/niklaskorz/nix-gram-extensions";
+      # inputs.nixpkgs.follows = "nixpkgs"; # Horror
     };
   };
   outputs =
