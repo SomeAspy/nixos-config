@@ -3,7 +3,6 @@
 {
   home.packages = with pkgs; [
     syncplay
-    seafile-client
     rbw # Root doesn't need access to my personal keys
     prismlauncher
     nomachine-client

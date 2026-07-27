@@ -1,22 +1,11 @@
 {
   buildGramExtension,
   fetchFromGitHub,
-  pkgs,
   ...
 }:
 # This is pretty ugly and I don't particularly care for keeping the extensions pure 100%
 # I'd rather just keep them up to date
 [
-  (buildGramExtension (finalAttrs: {
-    id = "nix";
-    version = "0.1.4";
-    src = fetchFromGitHub {
-      owner = "zed-extensions";
-      repo = "nix";
-      tag = "v${finalAttrs.version}";
-      hash = "sha256-EuheSDrJjj+tKB20/KN/xpD/xiSFksN+upS7c39yjf8=";
-    };
-  }))
   (buildGramExtension (finalAttrs: {
     id = "vscode-dark-polished";
     version = "0.0.9";

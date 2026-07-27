@@ -20,7 +20,7 @@
         };
         offloadAdmControls = true; # Offload WebRTC processing; Default true
         openH264Enabled = true; # Default true
-        enableHardwareAcceleration = true; # give this another go I suppose
+        enableHardwareAcceleration = true; # See desktop overrides
         debugLogging = false; # This defaults to true??
       };
     };

@@ -10,7 +10,7 @@ let
       BigIconSize = 96;
     };
     System = {
-      Terminal = "wezterm";
+      Terminal = "wezterm"; # TODO: Fix this, it just opens the terminal without opening the specific directory
     };
   };
 in

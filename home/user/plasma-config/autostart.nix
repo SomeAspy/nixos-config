@@ -4,7 +4,7 @@
     [Desktop Entry]
     Name=SeaFile
     Comment=Starts SeaFile process
-    Exec=${pkgs.seafile-client}/bin/seafile-applet --hide
+    Exec=${pkgs.seafile-client}/bin/seafile-applet
     Type=Application
     Terminal=false
     NoDisplay=false

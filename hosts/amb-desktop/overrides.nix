@@ -15,4 +15,5 @@
       };
     };
   };
+  programs.nixcord.discord.settings.enableHardwareAcceleration = false; # I don't know why this is an issue on my desktop specifically
 }

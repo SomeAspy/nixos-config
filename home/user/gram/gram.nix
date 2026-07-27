@@ -16,6 +16,7 @@ in
     nixd
     nixfmt
     vscode-json-languageserver
+    package-version-server
   ];
   xdg.dataFile."gram/extensions/installed" = {
     enable = pkgs.stdenv.hostPlatform.isLinux;
