@@ -15,9 +15,11 @@
     r2modman
     obs-studio
     audacity
+    discordchatexporter-cli
 
     # Development
     nodejs
     pnpm
+
   ];
 }
