@@ -31,6 +31,7 @@
     networkmanager = {
       enable = true;
       dns = "systemd-resolved"; # Ignore DHCP provided DNS
+      wifi.macAddress = "random"; # stable-ssid for per network
     };
   };
 

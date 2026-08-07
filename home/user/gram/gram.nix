@@ -17,6 +17,8 @@ in
     nixfmt
     vscode-json-languageserver
     package-version-server
+    lemminx
+    yaml-language-server
   ];
   xdg.dataFile."gram/extensions/installed" = {
     enable = pkgs.stdenv.hostPlatform.isLinux;
@@ -27,7 +29,7 @@ in
     '';
   };
   xdg.configFile."gram/settings.jsonc" = {
-    # I don't wanty to manually fuck with the config file every time I want to make a tiny change
+    # I don't want to manually fuck with the config file every time I want to make a tiny change
     # Not cursed at all
     source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/user/gram/settings.jsonc";
   };

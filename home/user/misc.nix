@@ -15,7 +15,11 @@
     r2modman
     obs-studio
     audacity
+    kopuz
     discordchatexporter-cli
+    d2
+    onlyoffice-desktopeditors
+    rendercv
 
     # Development
     nodejs

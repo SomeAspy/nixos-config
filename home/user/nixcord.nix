@@ -49,6 +49,7 @@
         validUser.enable = true;
         validReply.enable = true;
         volumeBooster.enable = true;
+        sendTimestamps.enable = true;
         imageZoom = {
           enable = true;
           size = 1000.0;
@@ -82,12 +83,14 @@
           removeBillingSettings = false;
           removeClanTag = false;
           removeGiftButton = false;
-          removeNameplate = false;
+          removeNameplate = true;
           removeProfileEffect = true; # I genuinely hate profiles being covered by stupid effects
           removeQuestsAboveDms = true;
+          removeLibraryAboveDms = true;
           removeServerBoostInfo = false;
           removeShopAboveDms = true;
           removeUnavailableEmojiPicker = false;
+
         };
 
       };
