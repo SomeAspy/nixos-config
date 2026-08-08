@@ -16,15 +16,17 @@
         "usb_storage"
         "sd_mod"
       ];
-      kernelModules = [ "xe" ];
+      kernelModules = [ "i915" ];
 
     };
     extraModulePackages = [ ];
     kernelModules = [ "kvm-intel" ];
     kernelParams = [
+      "i915.enable_guc=3"
       # Fuck it, lets use Xe
-      "i915.force_probe=!9a49"
-      "xe.force_probe=9a49"
+      #"i915.force_probe=!9a49"
+      #"xe.force_probe=9a49"
+      # Too explosive and inconsistent
     ];
   };
 

@@ -19,6 +19,8 @@ in
     package-version-server
     lemminx
     yaml-language-server
+    ruff
+    basedpyright
   ];
   xdg.dataFile."gram/extensions/installed" = {
     enable = pkgs.stdenv.hostPlatform.isLinux;

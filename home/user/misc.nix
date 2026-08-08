@@ -20,6 +20,7 @@
     d2
     onlyoffice-desktopeditors
     rendercv
+    kicad
 
     # Development
     nodejs
