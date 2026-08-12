@@ -5,7 +5,7 @@
     syncplay
     rbw # Root doesn't need access to my personal keys
     prismlauncher
-    nomachine-client
+    #nomachine-client #https://github.com/NixOS/nixpkgs/issues/550535
     pinentry-qt
     yt-dlp
     wezterm

@@ -7,6 +7,7 @@
       "networkmanager"
       "wheel"
       "tss" # TPM
+      "dialout"
     ];
   };
 }

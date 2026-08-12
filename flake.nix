@@ -25,12 +25,6 @@
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # https://github.com/nix-community/home-manager/issues/9676
-    gram-extensions = {
-      url = "git+https://codeberg.org/niklaskorz/nix-gram-extensions";
-      # https://nixpk.gs/pr-tracker.html?pr=537433
-      # inputs.nixpkgs.follows = "nixpkgs"; # Horror
-    };
   };
   outputs =
     inputs:
