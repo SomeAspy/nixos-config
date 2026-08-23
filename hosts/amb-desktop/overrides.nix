@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   hardware.graphics = {
     enable = true;
@@ -7,8 +7,6 @@
   nixpkgs.config.rocmSupport = true;
   home-manager.users."aiden" = {
     programs = {
-    nixcord.discord.settings.enableHardwareAcceleration = lib.mkForce false; # I don't know why this is an issue on my desktop specifically
-
       plasma = {
         powerdevil = {
           AC = {

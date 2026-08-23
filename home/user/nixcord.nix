@@ -7,7 +7,7 @@
       openASAR.enable = true;
       krisp.enable = false;
       package = pkgs.discord.override {
-        withTTS = false;
+       withTTS = false;
       };
       # Ref: https://github.com/SomeAspy/Discord.json (Very WIP!!!)
       settings = {
@@ -20,7 +20,7 @@
         };
         offloadAdmControls = true; # Offload WebRTC processing; Default true
         openH264Enabled = true; # Default true
-        enableHardwareAcceleration = true; # See desktop overrides
+        enableHardwareAcceleration = false; # for fucks sake
         debugLogging = false; # This defaults to true??
       };
     };
