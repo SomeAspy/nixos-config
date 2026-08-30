@@ -90,11 +90,12 @@
           removeServerBoostInfo = false;
           removeShopAboveDms = true;
           removeUnavailableEmojiPicker = false;
-
         };
-
+        questify = {
+          enable = true;
+          disableQuestsEverything = true;
+        };
       };
-
     };
   };
 }

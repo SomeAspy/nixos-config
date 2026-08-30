@@ -1,7 +1,8 @@
 # Notes
 
 ## If nix decides to nuke the TPM
-Should fix PCRlock fails:
+
+Should fix PCRlock fail:
 `sudo rm /var/lib/systemd/pcrlock.json`
 
 Re-enroll keys into TPM:
