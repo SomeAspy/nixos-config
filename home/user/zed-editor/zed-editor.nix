@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 {
   programs.zed-editor = {
     enable = true;
@@ -6,12 +6,6 @@
     extensions = [
       "nix"
       "d2"
-    ];
-    extraPackages = with pkgs; [
-      nixd
-      clang-tools
-      clang
-      platformio
     ];
   };
   xdg.configFile."zed/settings.json" = {

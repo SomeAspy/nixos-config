@@ -6,7 +6,7 @@
         # I need to break habits.
         # Note to future self:
         # If you uncomment this shit again you are a FUCKING DISAPPOINTMENT and a FUCKING FRAUD and you KNOW IT
-        "aistudio.google.com"
+#       "aistudio.google.com"
         "chatgpt.com"
         "gemini.google.com"
       ];

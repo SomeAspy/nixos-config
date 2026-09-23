@@ -20,10 +20,19 @@
     onlyoffice-desktopeditors
     rendercv
     kicad
+    kdePackages.kolourpaint
+    dosbox-x
 
     # Development
     nodejs
     pnpm
-
+    nixd
+    clang-tools
+    clang
+    platformio
+    wireviz
   ];
+  programs ={
+    direnv.enable = true;
+  };
 }
