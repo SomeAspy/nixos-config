@@ -5,6 +5,10 @@
     enableKwallet = true;
   };
   services.desktopManager.plasma6.enable = true;
+  programs = {
+    kde-pim.enable = false; # Literally never asked for this shit
+    kdeconnect.enable = false;
+  };
   environment = {
     plasma6.excludePackages = with pkgs.kdePackages; [
       discover # flatpak store gui
@@ -20,7 +24,6 @@
       gwenview
       plasma-browser-integration
       plasma-workspace-wallpapers
-
       # spectacle # Flameshot v14 STILL sucks
     ];
 

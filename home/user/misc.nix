@@ -14,14 +14,12 @@
     r2modman
     obs-studio
     audacity
-    kopuz
     discordchatexporter-cli
     d2
     onlyoffice-desktopeditors
     rendercv
     kicad
     kdePackages.kolourpaint
-    dosbox-x
 
     # Development
     nodejs
@@ -30,7 +28,6 @@
     clang-tools
     clang
     platformio
-    wireviz
   ];
   programs ={
     direnv.enable = true;
