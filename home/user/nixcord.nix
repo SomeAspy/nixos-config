@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   programs.nixcord = {
     enable = true;
@@ -6,9 +5,6 @@
       equicord.enable = true;
       openASAR.enable = true;
       krisp.enable = false;
-      package = pkgs.discord.override {
-       withTTS = false;
-      };
       # Ref: https://github.com/SomeAspy/Discord.json (Very WIP!!!)
       settings = {
         MINIMIZE_TO_TRAY = false;
@@ -34,8 +30,6 @@
         noTypingAnimation.enable = true;
         equicordHelper = {
           enable = true; # Required plugin
-          disableAdoptTagPrompt = true;
-          noModalAnimation = true;
         };
 
         # Necessities

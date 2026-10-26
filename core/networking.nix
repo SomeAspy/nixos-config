@@ -3,12 +3,7 @@
     # Hosts file
     hosts = {
       "0.0.0.0" = [
-        # I need to break habits.
-        # Note to future self:
-        # If you uncomment this shit again you are a FUCKING DISAPPOINTMENT and a FUCKING FRAUD and you KNOW IT
-#       "aistudio.google.com"
-        "chatgpt.com"
-        "gemini.google.com"
+	"aistudio.google.com"
       ];
     };
 

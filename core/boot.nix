@@ -25,7 +25,7 @@
         includeMicrosoftKeys = false;
         allowBrickingMyMachine = true; # good luck bro
       };
-      configurationLimit = 8;
+      configurationLimit = 4;
       measuredBoot = {
         enable = true;
         pcrs = [
