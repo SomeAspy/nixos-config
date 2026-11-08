@@ -3,7 +3,8 @@
     # Hosts file
     hosts = {
       "0.0.0.0" = [
-	"aistudio.google.com"
+        "aistudio.google.com"
+        "gemini.google.com"
       ];
     };
 

@@ -17,13 +17,13 @@
         "mailnews.start_page.enabled" = false;
         "mail.receipt.request_return_receipt_on" = true;
         "mail.SpellCheckBeforeSend" = true;
-        # 2 = Reject all
-        # 1 = Reject 3rd party
+        # 2 = Reject all - Explodes Google SSO
+        # 1 = Reject 3rd party - Explodes MS Exchange
         # 0 = accept all
-        "network.cookie.cookieBehavior" = 1; # Google SSO explodes without cookies
+        "network.cookie.cookieBehavior" = 0;
         "privacy.globalprivacycontrol.enabled" = true;
 
-        # Telemtry config
+        # Telemetry config
         "datareporting.healthreport.uploadEnabled" = false;
         "datareporting.policy.dataSubmissionEnabled" = false;
 
