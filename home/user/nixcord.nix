@@ -53,7 +53,7 @@
         viewIcons.enable = true;
         callTimer.enable = true;
         experiments.enable = true;
-        expressionCloner.enable = true;
+        expressionManager.enable = true;
         fixImagesQuality.enable = true;
         betterForwards = {
           enable = true;

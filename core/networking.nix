@@ -18,6 +18,12 @@
       "1.0.0.1#cloudflare-dns.com"
       "8.8.8.8#dns.google"
       "8.8.4.4#dns.google"
+
+      # IPv6 shit
+      "2606:4700:4700::1111#cloudflare-dns.com"
+      "2606:4700:4700::1001#cloudflare-dns.com"
+      "2001:4860:4860::8888#dns.google"
+      "2001:4860:4860::8844#dns.google"
     ];
 
     # Let NM handle this stuff.
@@ -35,7 +41,7 @@
     enable = true;
     settings = {
       Resolve = {
-        DNSOverTLS = true;
+        DNSOverTLS = "opportunity"; # Work blocks DoH agony
         DNSSEC = "allow-downgrade"; # It is the year of our lord 2026 and some sites still don't have DNSSEC. (cough electron-vite.org)
         Domains = [ "~." ];
       };
