@@ -14,5 +14,6 @@
     zip
     python3
     file # This should be default install tbh
+    traceroute # See above comment. Probably applies to like half of these.
   ];
 }
