@@ -5,6 +5,7 @@
       "0.0.0.0" = [
         "aistudio.google.com"
         "gemini.google.com"
+        "chatgpt.com"
       ];
     };
 
